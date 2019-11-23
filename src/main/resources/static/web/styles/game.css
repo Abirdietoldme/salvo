@@ -1,0 +1,174 @@
+/*.ship-piece{
+    background-color: mediumpurple;
+}
+
+.ship-piece-hited{
+    background-color: darkmagenta;
+}
+
+.salvo{
+    background-color: crimson;
+}
+*/
+
+button{
+    margin-top: 30px !important;
+}
+
+#playerInfo{
+    text-align: center;
+    font-family: 'Cinzel Decorative';
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Cinzel Decorative' !important;
+    text-transform: uppercase;
+    color: #ffffff !important;
+}
+
+body{
+    background-color: #000000 !important;
+}
+
+.grid-stack-item-content {
+    background-repeat: no-repeat;
+
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+.carrierHorizontal{
+    background-image: url('../img/ships/carrier.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.carrierVertical{
+    background-image: url('../img/ships/carrier_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.battleshipHorizontal{
+    background-image: url('../img/ships/battleship.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.battleshipVertical{
+    background-image: url('../img/ships/battleship_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.submarineHorizontal{
+    background-image: url('../img/ships/submarine.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.submarineVertical{
+    background-image: url('../img/ships/submarine_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.destroyerHorizontal{
+    background-image: url('../img/ships/destroyer.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.destroyerVertical{
+    background-image: url('../img/ships/destroyer_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.patrol_boatHorizontal{
+    background-image: url('../img/ships/patrol_boat.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.patrol_boatVertical{
+    background-image: url('../img/ships/patrol_boat_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+
+
+.grid-ships{
+    background-image: url(../img/original_2.gif);
+    background-size: cover;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    height: 499px;
+    width: 495px;
+    margin: auto;
+    margin-top: 10vh
+}
+
+#grid{
+    margin: 45px 0 0 45px;
+    position: absolute;
+    width: 450px;
+
+}
+
+.grid-wrapper{
+    display: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-cell{
+    display: flex;
+    box-sizing: border-box;
+    width: 45px;
+    height: 45px;
+    border: 1.3px solid #ffffff;
+    border-radius: 10px;
+    vertical-align: middle;
+    font-family: 'Cinzel Decorative';
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+.grid-cell span{
+
+    margin: auto
+}
+
+/* .busy-cell{
+    background-color:#ffffff;
+}*/
+
+.grid-row:first-child .grid-cell{
+    background-color: lightblue;
+}
+
+.grid-cell:first-child{
+    background-color: lightblue;
+}
+
+#alert-text{
+    color: red;
+    text-align: center;
+    display: block;
+}
