@@ -15,6 +15,11 @@ function loadData() {
         gamesData = data;
               console.log(gamesData);
 
+//Cargar CSS
+ if (data.gamePlayers.length == 2 && data.gamePlayers[1].id == getParameterByName('gp')){
+
+               document.getElementById('cssArchivo').href="styles/game_gp2.css";
+ }
 
       //Jugadores
             var playerInfo;
@@ -107,15 +112,15 @@ const loadGrid = function () {
         // en falso permite arrastrar a los widget, true lo deniega
         staticGrid: true,
         //para animaciones
-        animate: true
+        animate: true,
+        //PARA QUE LOS BARCOS NO SE MUEVAN
+        disableDrag: true,
+
     }
     //inicializacion de la matriz
     $('.grid-stack').gridstack(options);
 
     grid = $('#grid').data('gridstack');
-    //console.log(gamesData);
-    //setShips(gamesData)
-
 
     //createGrid construye la estructura de la matriz
     createGrid(11, $(".grid-ships"), 'ships')

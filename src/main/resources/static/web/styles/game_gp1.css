@@ -1,0 +1,64 @@
+.carrierHorizontal{
+    background-image: url('../img/ships/carrier.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.carrierVertical{
+    background-image: url('../img/ships/carrier_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.battleshipHorizontal{
+    background-image: url('../img/ships/battleship.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.battleshipVertical{
+    background-image: url('../img/ships/battleship_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.submarineHorizontal{
+    background-image: url('../img/ships/submarine.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.submarineVertical{
+    background-image: url('../img/ships/submarine_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.destroyerHorizontal{
+    background-image: url('../img/ships/destroyer.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.destroyerVertical{
+    background-image: url('../img/ships/destroyer_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}
+
+.patrol_boatHorizontal{
+    background-image: url('../img/ships/patrol_boat.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+.patrol_boatVertical{
+    background-image: url('../img/ships/patrol_boat_vertical.png');
+    background-size: 100%;
+    background-position: center;
+    width: 45px !important;
+}

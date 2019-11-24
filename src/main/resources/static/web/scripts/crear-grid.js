@@ -11,37 +11,34 @@ function getParameterByName(name) {
 function loadData() {
   $.get('/api/game_view/' + getParameterByName('gp'))
     .done(function (data) {
-      cargarCSS()
+
       console.log(data);
 
-// Carga un CSS diferente, para el player 1 = familias, para el player 2 Withe walkers
-function cargarCSS(data)  {
-    if(data.player ==  "Guest"){
+ //Cargar CSS
+ if (data.gamePlayers[1].id == getParameterByName('gp')){
+               document.getElementById('cssArchivo').href="styles/game_gp2.css";
 
-    }else{
-
-    }
-
-};
+ }
 
 
- //Jugadores
+//Jugadores
              var playerInfo;
+
              if (data.gamePlayers.length == 2){
                if(data.gamePlayers[0].id == getParameterByName('gp')){
                playerInfo = [data.gamePlayers[0].player, data.gamePlayers[1].player];
+
                }
                if(data.gamePlayers[1].id == getParameterByName('gp')){
                playerInfo = [data.gamePlayers[1].player, data.gamePlayers[0].player];
-                       }
-               $('#playerInfo').text(playerInfo[0].email + '(you) vs ' + playerInfo[1].email);
+               }
 
+               $('#playerInfo').text(playerInfo[0].email + '(you) vs ' + playerInfo[1].email);
                }
 
             else{
                playerInfo = [data.gamePlayers[0].player];
                  $('#playerInfo').text(playerInfo[0].email + ' Waiting for another player...');
-
                }
 
 
@@ -121,7 +118,7 @@ const loadGrid = function () {
 
     grid = $('#grid').data('gridstack');
 
-    //Aqui se inicializan los widgets(nuestros barcos) en la matriz 
+    //Aqui se inicializan los widgets(nuestros barcos) en la matriz
     //.addWidget(elemento,pos x, pos y, ancho, alto) **
     grid.addWidget($('<div id="patrol_boat"><div class="grid-stack-item-content patrol_boatHorizontal"></div><div/>'),
         0, 1, 2, 1);

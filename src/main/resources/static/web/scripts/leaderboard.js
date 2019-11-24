@@ -58,17 +58,17 @@ function signup() {
 
 // load and display JSON sent by server for /players
 
-    function loadData2() {
-      $.get("/api/games")
-        .done(function (data) {
-            quienSoy(data);
-            console.log(data);
-            if(data.player == "Guest"){
-            updateViewGuest(data);
-            }
-            if(data.player != "Guest"){
-            updateView(data);
-            }
+        function loadData2() {
+          $.get("/api/games")
+            .done(function (data) {
+                quienSoy(data);
+                console.log(data);
+                if(data.player == "Guest"){
+                updateViewGuest(data);
+                }
+                if(data.player != "Guest"){
+                updateView(data);
+                }
 
 
         })
