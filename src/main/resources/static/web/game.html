@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ships locations!</title>
@@ -8,38 +9,66 @@
   <link rel="stylesheet" href="dist/gridstack-extra.css">
   <link rel="stylesheet" type="text/css" href="styles/game.css">
   <link rel="stylesheet" type="text/css" href="styles/game_gp1.css" id="cssArchivo">
-
   <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="container">
-      <div>
-          <span id="playerInfo"></span>
-      </div>
-      <div class="row">
-        <div class="col">
-          <section>
-            <h2>Game Board</h2>
-            <div class="grid-ships">
-        
-              <div id="grid" class="grid-stack grid-stack-10">
-              </div>
-          </div>
-          </section>
-        </div>
-        <div class="col">
-          <section>
-            <h2>Salvo board</h2>
-            <div class="grid-ships">
-              <div id="grid" class="grid-stack grid-stack-10">
-              </div>
+  <div class="container">
+    <div class="centerdiv">
+      <span id="playerInfo"></span>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <section>
+          <h2>Game Board</h2>
+          <div class="grid-ships">
+
+            <div id="grid" class="grid-stack grid-stack-10">
             </div>
-            <button class="btn btn-primary" onclick="enviarSalvos()">Shoot</button>
-          </section>
-        </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <section>
+          <h2>Salvo board</h2>
+          <div class="grid-salvoes">
+
+          </div class="centerdiv mt-30">
+          <button class="btn btn-primary" onclick="enviarSalvos()">Shoot</button>
+        </section>
       </div>
     </div>
-  <script  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <section class="row">
+      <div class="col-md-6 col-sm-12" id="gameRecordSelf">
+        <table id="gameRecordSelfTable" class="table table-striped table-sm tablesW">
+          <col class="columnTurn">
+          <col class="columnDamages">
+          <thead>
+          <th class="textCenter">Turn</th>
+          <th>Damages on my Team</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="col-md-6 col-sm-12" id="gameRecordOpponent">
+        <table id="gameRecordOppTable" class="table table-striped table-sm tablesW">
+          <col class="columnTurn">
+          <col class="columnDamages">
+          <thead>
+          <th class="textCenter">Turn</th>
+          <th>Damages on Opponent's Team</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
   <script src="dist/jquery-ui.min.js"></script>
   <script src="dist/gridstack.js"></script>
@@ -47,7 +76,8 @@
   <script src="dist/jquery.ui.touch-punch.min.js"></script>
   <script src="scripts/game.js"></script>
 
-    <audio src="./audio/hielo&fuego.mp3" controls autoplay loop></audio>
+  <audio src="./audio/hielo&fuego.mp3" controls autoplay loop></audio>
 
 </body>
+
 </html>

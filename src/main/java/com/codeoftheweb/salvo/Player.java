@@ -47,6 +47,7 @@ public class Player {
 
 
     public Set<Score> getScores() {
+
         return scores;
     }
 

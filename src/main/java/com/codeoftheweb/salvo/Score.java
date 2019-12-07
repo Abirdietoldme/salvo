@@ -58,6 +58,7 @@ public class Score {
     }
 
     public long getId() {
+
         return id;
     }
 
@@ -82,11 +83,13 @@ public class Score {
     }
 
     public Player getPlayer() {
+
         return player;
     }
 
     public void setPlayer(Player player)
     {
+
         this.player = player;
     }
 

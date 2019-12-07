@@ -1,6 +1,13 @@
 $(function () {
-  var gamesData
-  loadData();
+  var gamesData;
+  var dataGral;
+  (async () => {
+                    dataGral    =   await loadData2();
+                    console.log(dataGral);
+                    loadData(dataGral.player.id);
+ })()
+
+     makeTables();
 
 });
 
@@ -9,16 +16,18 @@ function getParameterByName(name) {
   return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
-function loadData() {
+function loadData(idPlayerLogued) {
   $.get('/api/game_view/' + getParameterByName('gp'))
     .done(function (data) {
         gamesData = data;
               console.log(gamesData);
 
+
+
 //Cargar CSS
  if (data.gamePlayers.length == 2 && data.gamePlayers[1].id == getParameterByName('gp')){
-
                document.getElementById('cssArchivo').href="styles/game_gp2.css";
+
  }
 
       //Jugadores
@@ -41,13 +50,12 @@ function loadData() {
               }
 
 
-
        data.ships.forEach(function (shipPiece) {
         shipPiece.locations.forEach(function (shipLocation) {
           let turnHitted = isHit(shipLocation,data.salvoes,playerInfo[0].id)
           if(turnHitted >0){
             $('#B_' + shipLocation).addClass('ship-piece-hited');
-            $('#B_' + shipLocation).text(turnHitted);
+            //$('#B_' + shipLocation).text(turnHitted);
           }
           else
             $('#B_' + shipLocation).addClass('ship-piece');
@@ -66,10 +74,115 @@ function loadData() {
         }
       });
       setShips(gamesData);
+      console.log(idPlayerLogued);
+      setSalvoes(gamesData, idPlayerLogued); //carga los salvoes guardados
+
+      //Determinar que celdas golpeé
+            gamesData.hits.opponent.forEach(function(playTurn) {
+                    playTurn.hitLocations.forEach(function (hitCell) {
+          x = +(hitCell.substring(1)) - 1
+          y =stringToInt(hitCell[0].toUpperCase())
+                        cellID = "#salvo" + y + x;
+                        $(cellID).addClass("hitCell");
+                    });
+                });
+            makeTables(gamesData.hits.opponent, "gameRecordOppTable");
+            makeTables(gamesData.hits.self, "gameRecordSelfTable");
+
+            // Consultar si le pegué a los barcos del otro - Tabla
+
+            function makeTables (hitsArray, tableId) {
+
+                    var tableId = "#" + tableId + " tbody";
+                    $(tableId).empty();
+                    var shipsAfloat = 5;
+                    var playerTag;
+                    if (tableId == "gameRecordOppTable") {
+                        playerTag = "#opp";
+                    }
+                    if (tableId == "gameRecordSelfTable") {
+                        playerTag = "#";
+                    }
+
+                    hitsArray.forEach(function (playTurn) {
+                        var hitsReport = "";
+                        if (playTurn.damages.carrierHits > 0){
+                            hitsReport += "Carrier " + addDamagesIcons(playTurn.damages.carrierHits, "hit") + " ";
+                            if (playTurn.damages.carrier === 5){
+                                hitsReport += "SUNK! ";
+                                shipsAfloat--;
+                            }
+                        }
+
+                        if (playTurn.damages.battleshipHits > 0){
+                            hitsReport += "Battleship " + addDamagesIcons(playTurn.damages.battleshipHits, "hit") + " ";
+                            if (playTurn.damages.battleship === 4){
+                                hitsReport += "SUNK! ";
+                                shipsAfloat--;
+                            }
+                        }
+                        if (playTurn.damages.submarineHits > 0){
+                            hitsReport += "Submarine " + addDamagesIcons(playTurn.damages.submarineHits, "hit") + " ";
+                            if (playTurn.damages.submarine === 3){
+                                hitsReport += "SUNK! ";
+                                shipsAfloat--;
+                            }
+                        }
+                        if (playTurn.damages.destroyerHits > 0){
+                            hitsReport += "Destroyer " + addDamagesIcons(playTurn.damages.destroyerHits, "hit") + " ";
+                            if (playTurn.damages.destroyer === 3){
+                                hitsReport += "SUNK! ";
+                                shipsAfloat--;
+                            }
+                        }
+                        if (playTurn.damages.patrolboatHits > 0){
+                            hitsReport += "Patrol Boat " + addDamagesIcons(playTurn.damages.patrolboatHits, "hit") + " ";
+                            if (playTurn.damages.patrolboat === 2){
+                                hitsReport += "SUNK! ";
+                                shipsAfloat--;
+                            }
+                        }
+
+                        if (playTurn.missed > 0){
+                            hitsReport +=  " ||  Missed shots " + addDamagesIcons(playTurn.missed, "missed") + " ";
+                        }
+
+                        if (hitsReport === ""){
+                            hitsReport = "All salvoes missed! No damages!"
+                        }
+
+                        $('<tr><td class="textCenter">' + playTurn.turn + '</td><td>' + hitsReport + '</td></tr>').prependTo(tableId);
+
+                    });
+                    $('#shipsLeftSelfCount').text(shipsAfloat);
+                }
+
+                function addDamagesIcons (numberOfHits, hitOrMissed) {
+                    var damagesIcons = "";
+                    if (hitOrMissed === "missed") {
+                        for (var i = 0; i < numberOfHits; i++) {
+                            damagesIcons += "<img class='hitblast' src='img/snow.png'>"
+                        }
+                    }
+                        if (hitOrMissed === "hit") {
+                            for (var i = 0; i < numberOfHits; i++) {
+                                damagesIcons += "<img class='hitblast' src='img/fire.png'>"
+                            }
+                    }
+                    return damagesIcons;
+                }
+
+
     })
     .fail(function (jqXHR, textStatus) {
       alert('Failed: ' + textStatus);
     });
+
+}
+
+async   function loadData2() {
+    return  $.get('/api/games');
+
 }
 
 function isHit(shipLocation,salvoes,player_id) {
@@ -127,6 +240,22 @@ const loadGrid = function () {
 
     listenBusyCells('ships')
     $('.grid-stack').on('change', () => listenBusyCells('ships'))
+
+    //Crear grilla de Salvoes
+    createGrid(11, $(".grid-salvoes"), 'salvo')
+
+    var contador = 0
+
+
+    //Si selecciono mas de 5 casilleros no puedo disparar
+    //Una vez cargado los salvoes con createGrid procedemos a establecer una funcion click por cada celda de la siguiente manera
+        $('div[id^="salvo"].grid-cell').click(function(event){
+            if(!$(this).hasClass("salvo") && !$(this).hasClass("targetCell") && $(".targetCell").length < 5)
+              {
+                $(this).addClass("targetCell");
+              } else if($(this).hasClass("targetCell")){
+                $(this).removeClass("targetCell");}
+        })
 
 }
 
@@ -210,6 +339,56 @@ const createGrid = function(size, element, id){
     element.append(wrapper)
 }
 
+
+//Turnos
+function getTurn(){
+  var array=[]
+  var turn = 0;
+  gamesData.salvoes.map(function(salvo){
+    if(salvo.player == getParameterByName('gp')){
+      array.push(salvo.turn);
+    }
+  })
+  turn = Math.max.apply(Math, array);
+
+  if (turn == -Infinity){
+    return 1;
+  } else {
+    return turn + 1;
+  }
+
+}
+
+//Salvo seleccionar 5 y enviar post al back
+function enviarSalvos(){
+    var turno = getTurn()
+    var locationsToShoot=[];
+    $(".targetCell").each(function(){
+        let location = $(this).attr("id").substring(5);
+        let locationConverted = String.fromCharCode(parseInt(location[0]) + 65) + (parseInt(location[1]) + 1)
+
+        locationsToShoot.push(locationConverted)
+    })
+    console.log(locationsToShoot)
+    var url = "/api/games/players/" + getParameterByName("gp") + "/salvoes"
+    $.post({
+        url: url,
+        data: JSON.stringify({salvoLocations:locationsToShoot}),
+        dataType: "text",
+        contentType: "application/json"
+    })
+    .done(function (response, status, jqXHR) {
+        alert( "Salvo added: " + response );
+        location.reload();
+    })
+    .fail(function (jqXHR, status, httpError){
+        alert("Failed to add salvo: " + status + " " + httpError);
+    })
+
+}
+
+
+
 //gets the locations of the ships from the back-end
 function setShips(gamesData) {
     for (i = 0; i < gamesData.ships.length; i++) {
@@ -238,20 +417,45 @@ function setShips(gamesData) {
 }
 
 //Bucle que consulta por todas las celdas para ver si estan ocupadas o no
-const listenBusyCells = function(id){
+const listenBusyCells = function(id, player, dataGral){
     /* id vendria a ser ships. Recordar el id de las celdas del tablero se arma uniendo
     la palabra ships + fila + columna contando desde 0. Asi la primer celda tendra id
     ships00 */
-    for(let i = 0; i < 10; i++){
-        for(let j = 0; j < 10; j++){
-            if(!grid.isAreaEmpty(i,j)){
-                            $(`#${id}${j}${i}`).addClass('busy-cell').removeClass('empty-cell')
-                        } else{
-                            $(`#${id}${j}${i}`).removeClass('busy-cell').addClass('empty-cell')
-                        }
+    if (player == dataGral) {
+        for(let i = 0; i < 10; i++){
+            for(let j = 0; j < 10; j++){
+                if(!grid.isAreaEmpty(i,j)){
+                                $(`#${id}${j}${i}`).addClass('busy-cell').removeClass('empty-cell')
+                            } else{
+                                $(`#${id}${j}${i}`).removeClass('busy-cell').addClass('empty-cell')
+                            }
+            }
         }
     }
 }
+
+//get the locations of the salvoes from the back-end
+function setSalvoes(gamesData, idPlayerLogued) {
+    for (i = 0; i < gamesData.salvoes.length; i++) {
+        for (j = 0; j < gamesData.salvoes[i].locations.length; j++) {
+            let turn = gamesData.salvoes[i].turn
+            let player = gamesData.salvoes[i].player
+            let x = +(gamesData.salvoes[i].locations[j][1]) - 1
+            let y = stringToInt(gamesData.salvoes[i].locations[j][0].toUpperCase())
+            if (player == idPlayerLogued) {
+                document.getElementById(`salvo${y}${x}`).classList.add('salvo')
+                document.getElementById(`salvo${y}${x}`).innerHTML = `<span>${turn}</span>`
+            } else {
+                if (document.getElementById(`ships${y}${x}`).className.indexOf('busy-cell') != -1) {
+                    document.getElementById(`ships${y}${x}`).classList.remove('busy-cell')
+                    document.getElementById(`ships${y}${x}`).classList.add('ship-down')
+                    //document.getElementById(`ships${y}${x}`).innerHTML = `<span>${turn}</span>`
+                }
+            }
+        }
+    }
+}
+
 
 
 const stringToInt = function (str) {
@@ -278,29 +482,6 @@ const stringToInt = function (str) {
             return 9;
     }
 }
-
-//gets the locations of the salvoes from the back-end
-function setSalvoes() {
-    for (i = 0; i < gamesData.salvoes.length; i++) {
-        for (j = 0; j < gamesData.salvoes[i].salvoLocations.length; j++) {
-            let turn = gamesData.salvoes[i].turn
-            let player = gamesData.salvoes[i].player
-            let x = +(gamesData.salvoes[i].salvoLocations[j][1]) - 1
-            let y = stringToInt(gamesData.salvoes[i].salvoLocations[j][0].toUpperCase())
-            if (player == actualPlayer.id) {
-                document.getElementById(`salvoes${y}${x}`).classList.add('salvo')
-                document.getElementById(`salvoes${y}${x}`).innerHTML = `<span>${turn}</span>`
-            } else {
-                if (document.getElementById(`ships${y}${x}`).className.indexOf('busy-cell') != -1) {
-                    document.getElementById(`ships${y}${x}`).classList.remove('busy-cell')
-                    document.getElementById(`ships${y}${x}`).classList.add('ship-down')
-                    document.getElementById(`ships${y}${x}`).innerHTML = `<span>${turn}</span>`
-                }
-            }
-        }
-    }
-}
-
 
 //Música
 var reproducir = document.getElementsByTagName("audio");

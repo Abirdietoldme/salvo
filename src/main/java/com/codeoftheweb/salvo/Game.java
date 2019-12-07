@@ -31,6 +31,7 @@ public class Game {
         dto.put("created", this.getFechaJuego());
         dto.put("gamePlayers", this.getGamePlayers()
                 .stream()
+                .sorted(Comparator.comparing(GamePlayer::getId))
                 .map(gamePlayer -> gamePlayer.makeGamePlayerDTO())
                 .collect(Collectors.toList()));
         dto.put("score", this.getAllScores(getScores()));

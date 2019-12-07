@@ -40,10 +40,12 @@ import java.util.Map;
             dto.put("turn", this.getTurn());
             dto.put("player",   this.getGamePlayer().getPlayer().getId());
             dto.put("locations",    this.getSalvoLocations());
+            dto.put("hits", gamePlayer.barcosgolpeados());
             return  dto;
         }
 
         public long getId() {
+
             return id;
         }
 

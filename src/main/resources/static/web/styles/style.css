@@ -7,8 +7,9 @@ body{
 
 h2{
     text-align: center;
-    font-family: 'Cinzel Decorative';
+    font-family: 'Lora', serif !important;
     text-transform: uppercase;
+    color: cyan;
 }
 
 table{
@@ -24,10 +25,6 @@ table{
 td {
     padding: 15px;
 }
-thead{
-    font-family: 'Cinzel Decorative';
-    font-weight: 600;
-}
 
 th{
     padding-left: 10px;
@@ -35,8 +32,10 @@ th{
 }
 
 thead {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
     text-align: center;
-    font-weight: bold;
+    font-weight: 900;
     background-image: url(../img/montanas.png);
     background-repeat: repeat-x;
     background-color: #ffffff;
@@ -55,16 +54,24 @@ section{
 }
 
 .log{
-    width: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    border-color: #ffffff;
-    border-width: 2px;
+    text-align: center;
+    position:fixed;
+    top: 10px;
+    left: 50px;
+    width: 17%;
+    z-index: 100
 }
 
 .form-control{
     margin-bottom: 10px;    
+}
+
+h3{
+    font-family: 'Cinzel Decorative';
+    text-transform: uppercase;
+    font-size: medium;
+
+
 }
 
 #gameFull{
@@ -94,4 +101,8 @@ section{
 
 .textCenter {
     text-align: center;
+}
+
+#gameRecordSelfTable{
+    margin-top:400px !important;
 }

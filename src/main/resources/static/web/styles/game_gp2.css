@@ -62,3 +62,23 @@
     background-position: center;
     width: 45px !important;
 }
+
+/*Celdas seleccionadas*/
+.targetCell{
+    background-color: #ffffff;
+    opacity: 50%;
+}
+
+/*Celdas golpeadas con barcos*/
+.ship-down{
+    background-image: url('../img/whitewalker/fuego.gif');
+    background-size: 100%;
+    z-index: 100;
+}
+
+/*Celdas enemigas con barcos tocados*/
+.hitCell{
+    background-image: url('../img/ships/fuegodehielo.gif');
+    background-size: 100%;
+    z-index: 100;
+}

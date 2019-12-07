@@ -15,7 +15,7 @@ function loadData() {
       console.log(data);
 
  //Cargar CSS
- if (data.gamePlayers[1].id == getParameterByName('gp')){
+ if (data.gamePlayers.length == 2 && data.gamePlayers[1].id == getParameterByName('gp')){
                document.getElementById('cssArchivo').href="styles/game_gp2.css";
 
  }

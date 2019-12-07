@@ -84,6 +84,7 @@ function signup() {
               $("#logout-form").show();
             }
         })
+        $("#gameCreatedSuccessfully").hide()
 
         .fail(function (jqXHR, textStatus) {
           showOutput("Failed: " + textStatus);

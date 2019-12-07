@@ -31,6 +31,10 @@ public class SalvoController {
     @Autowired
     private SalvoRepository salvoRepository;
 
+    @Autowired
+    private ShipRepository  shipRepository;
+
+
 
     //Autenticación
     @RequestMapping("/games")
@@ -96,6 +100,8 @@ public class SalvoController {
 
         dto.put("gamePlayers", gamePlayer.getGame().getGamePlayers()
                 .stream()
+                //Borrar comentario si funciona la linea de abajo
+                .sorted(Comparator.comparing(GamePlayer::getId))
                 .map(gp1 -> gp1.makeGamePlayerDTO())
                 .collect(Collectors.toList()));
         dto.put("ships", gamePlayer.getShips()
@@ -108,7 +114,7 @@ public class SalvoController {
                         .stream()
                         .map(salvo -> salvo.makeSalvoDTO()))
                 .collect(Collectors.toList()));
-        dto.put("hits", hits);
+        dto.put("hits", gamePlayer.barcosgolpeados());
 
 
         return new ResponseEntity<>(dto, HttpStatus.OK);
@@ -223,13 +229,22 @@ public class SalvoController {
         }
 
         if(gamePlayer.getShips().isEmpty()){
-            return new ResponseEntity<>(makeMap("error", "No está autorizado, You doesn't have ships"), HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(makeMap("error", "No está autorizado, You don't have ships"), HttpStatus.FORBIDDEN);
+
+        }
+
+        //Comprobar si estoy disparando mas de 5 tiros
+
+        if(salvo.getSalvoLocations().size() > 5){
+            return new ResponseEntity<>(makeMap("error", "You cant shoot more than 5 salvoes"), HttpStatus.FORBIDDEN);
 
         }
 
         //Si ya disparé en este turno no me deja disparar, si no disparé me guarda la jugada
 
-        if(!turnHasSalvoes(salvo, gamePlayer.getSalvoes())) {
+        //if(!turnHasSalvoes(salvo, gamePlayer.getSalvoes())) {
+
+        if(gamePlayer.getSalvoes().size()   <=  gamePlayer.getOpponent().getSalvoes().size()){
             salvo.setTurn(gamePlayer.getSalvoes().size() + 1);
             salvo.setGamePlayer(gamePlayer);
             salvoRepository.save(salvo);
