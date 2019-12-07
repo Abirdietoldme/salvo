@@ -6,26 +6,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/GamePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/GamePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Salvo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Salvo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/crear-grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/crear-grid.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/scripts/crear-grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/scripts/crear-grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/img/ships/fuegodehielo.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/img/ships/fuegodehielo.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/scripts/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/scripts/leaderboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/styles/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/styles/game.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/styles/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -85,29 +74,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="246" column="10" selection-start-line="246" selection-start-column="10" selection-end-line="246" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/game.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1147">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="15" />
+            <state relative-caret-position="176">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/style.css">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/game.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="345">
+              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -115,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="88" column="1" selection-start-line="83" selection-end-line="88" selection-end-column="1" />
+            <state relative-caret-position="409">
+              <caret line="84" column="8" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -124,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+            <state relative-caret-position="318">
+              <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -134,36 +132,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>text</find>
-      <find>ost</find>
-      <find>api/</find>
-      <find>post</find>
-      <find>locationConverted</find>
-      <find>setSalvoes</find>
-      <find>barcosgolpeados</find>
-      <find>hits</find>
-      <find>shipType</find>
-      <find>patrol_boatHitsInTurn</find>
-      <find>type</find>
-      <find>getShips</find>
-      <find>turnHasSalvoes</find>
-      <find>getOpponent</find>
-      <find>button</find>
-      <find>listenBusyCells</find>
-      <find>locationsToShoot</find>
-      <find>getTurn</find>
-      <find>opponent</find>
-      <find>getGamePlayer</find>
-      <find>shiptype</find>
       <find>gamePlayer</find>
       <find>cin</find>
       <find>makeGameRecordTable</find>
-      <find>makeTables</find>
-      <find>loadData</find>
       <find>missed shot</find>
       <find>setShips</find>
       <find>cellID</find>
       <find>gamesData</find>
+      <find>hitCell</find>
+      <find>playTurn</find>
+      <find>player.id</find>
+      <find>loadData2</find>
+      <find>dataGral</find>
+      <find>opponent</find>
+      <find>makeTables</find>
+      <find>has</find>
+      <find>console</find>
+      <find>nohit</find>
+      <find>'.salvo'</find>
+      <find>z-in</find>
+      <find>createGrid</find>
+      <find>id</find>
+      <find>salvo</find>
+      <find>addClass</find>
+      <find>noHitCell</find>
+      <find>loadData</find>
+      <find>reproducir</find>
+      <find>class</find>
+      <find>getTurn</find>
+      <find>turno</find>
+      <find>gp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,15 +171,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Salvo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/GamePlayer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/web/styles/game.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/web/styles/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/web/game.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java" />
       </list>
     </option>
   </component>
@@ -305,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.salvo [clean]">
+  <component name="RunManager" selected="Gradle.salvo [bootRun]">
     <configuration name="salvo [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -366,6 +364,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="28" width="1437" height="865" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49935317" visible="true" weight="0.25663084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -386,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32988358" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Gradle" order="1" visible="true" weight="0.3297491" />
+      <window_info anchor="right" id="Gradle" order="1" weight="0.3297491" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24946237" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -401,13 +400,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/scripts/leaderboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="171" selection-start-line="159" selection-end-line="171" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.9.RELEASE/2fa8c964b4d06847453f17f47a1017ee7512ad18/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -432,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/GamePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="963">
@@ -453,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -467,52 +445,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="270" column="5" lean-forward="true" selection-start-line="270" selection-start-column="5" selection-end-line="270" selection-end-column="5" />
+        <state relative-caret-position="178">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game.css">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/scripts/leaderboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="124" column="4" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="88" column="1" selection-start-line="83" selection-end-line="88" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1147">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="15" />
+        <state relative-caret-position="1627">
+          <caret line="275" column="56" lean-forward="true" selection-start-line="275" selection-start-column="56" selection-end-line="275" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
+        <state relative-caret-position="858">
           <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="306">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/styles/game_gp1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="144" column="47" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/web/scripts/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codeoftheweb/salvo/SalvoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="246" column="10" selection-start-line="246" selection-start-column="10" selection-end-line="246" selection-end-column="10" />
         </state>
       </provider>
     </entry>

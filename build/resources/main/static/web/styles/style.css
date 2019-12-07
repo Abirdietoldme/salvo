@@ -1,0 +1,108 @@
+body{
+    background-color: #000000;
+    color: #ffffff;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Lora', serif !important;
+    text-transform: uppercase;
+    color: cyan;
+}
+
+table{
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    table-layout: fixed;
+    border-style: solid;
+    border-width: medium;
+    border-color: #ffffff;
+}
+
+td {
+    padding: 15px;
+}
+
+th{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+thead {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    background-image: url(../img/montanas.png);
+    background-repeat: repeat-x;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px;
+    border-color: #ffffff;
+    border-style: solid;
+}
+
+section{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left : auto;
+    margin-right : auto;
+    
+}
+
+.log{
+    text-align: center;
+    position:fixed;
+    top: 10px;
+    left: 50px;
+    width: 17%;
+    z-index: 100
+}
+
+.form-control{
+    margin-bottom: 10px;    
+}
+
+h3{
+    font-family: 'Cinzel Decorative';
+    text-transform: uppercase;
+    font-size: medium;
+
+
+}
+
+#gameFull{
+    color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+}
+
+#got{
+    background: url(../img/header.jpg) no-repeat center center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover; 
+    margin-top: 0px;
+    padding-top:30px;       
+    height: 260px;
+}
+
+.JoinGameGris{
+    background-color: #808080;
+}
+
+.JoinGameGris:hover{
+    background-color: #808080;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+#gameRecordSelfTable{
+    margin-top:400px !important;
+}

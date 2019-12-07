@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Winter is here</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="got"></header>
+<section class="log">
+    <form id="login-form" class="form-inline" onsubmit="return false">
+        <fieldset>
+            <legend><h3>Sign In</h3></legend>
+                <label for="username">User name</label>
+                <input type="email" class="form-control" id="username"  name="username" placeholder="username@domain">
+
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required placeholder="********">
+            <!--<button class="btn btn-primary" onclick="login()">Login</button>
+            <button class="btn btn-primary" onclick="signup()">Sign up</button> -->
+            <input type="submit" class="btn btn-primary submitButton" value="Login" name="login"/>
+            <input type="submit" class="btn btn-primary submitButton" value="Sign Up" name="signup"/>
+        </fieldset>
+
+    </form>
+
+    <form  id="logout-form">
+        <button type="submit" class="btn btn-primary" onclick="logout()" value="Logout" id=""logout>Logout</button>
+    </form>
+
+</section>
+
+<section id="nuevoJuego">
+    <form class="textCenter" id="createGameForm">
+    <input class="btn btn-warning" type="submit" id="createGame" value="Create New Game"/>
+    </form>
+
+    <h3 id="errorSignup" class="textCenter"></h3>
+    <div id="gameCreatedSuccessfully">
+        <h3 class="textCenter">Game created successfully! Redirecting to game page...</h3>
+    </div>
+</section>
+
+
+<section>
+    <h2>Games</h2>
+    <ol id="gameList"></ol>
+</section>
+
+<section>
+    <h2>Leaderboard</h2>
+    <table border="1">
+        <thead>
+        <th>Name</th>
+        <th>Total</th>
+        <th>Won</th>
+        <th>Lost</th>
+        <th>Tied</th>
+        </thead>
+        <tbody id="puntajes">
+        </tbody>
+    </table>
+</section>
+<script src="./scripts/jquery-3.3.1.min.js"></script>
+<script src="./scripts/leaderboard.js"></script>
+<audio src="./audio/openingGOT.mp3" controls autoplay loop></audio>
+</body>
+</html>
