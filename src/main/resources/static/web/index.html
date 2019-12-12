@@ -4,7 +4,7 @@
 
 </style>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter is here</title>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -13,7 +13,7 @@
 </head>
 <body>
 <header id="got"></header>
-<section class="log">
+<section class="log col-12">
     <form id="login-form" class="form-inline" onsubmit="return false">
         <fieldset>
             <legend><h3>Sign In</h3></legend>
@@ -36,7 +36,7 @@
 
 </section>
 
-<section id="nuevoJuego">
+<section id="nuevoJuego" class="col-sm-12">
     <form class="textCenter" id="createGameForm">
     <input class="btn btn-warning" type="submit" id="createGame" value="Create New Game"/>
     </form>
@@ -48,12 +48,12 @@
 </section>
 
 
-<section>
+<section class="col-sm-12">
     <h2>Games</h2>
     <ol id="gameList"></ol>
 </section>
 
-<section>
+<section class="col-sm-12">
     <h2>Leaderboard</h2>
     <table border="1">
         <thead>

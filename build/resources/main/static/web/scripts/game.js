@@ -442,8 +442,11 @@ function setSalvoes(gamesData, idPlayerLogued) {
         for (j = 0; j < gamesData.salvoes[i].locations.length; j++) {
             let turn = gamesData.salvoes[i].turn
             let player = gamesData.salvoes[i].player
-            let x = +(gamesData.salvoes[i].locations[j][1]) - 1
+            let x = +(gamesData.salvoes[i].locations[0].substring(1)) - 1
             let y = stringToInt(gamesData.salvoes[i].locations[j][0].toUpperCase())
+            console.log(x);
+
+
             if (player == idPlayerLogued) {
                 document.getElementById(`salvo${y}${x}`).classList.add('salvo')
                 document.getElementById(`salvo${y}${x}`).classList.add('noHitCell')
